@@ -84,7 +84,7 @@
 
  .. note::
 
-  当使用 ``twisted/authbahn`` 循环的时候，终止主事件循环是一个不可逆的行为，因为 ``twisted`` 反应器 (reacters) 不能被重启。这个操作应该保留到你程序的最后面再使用。
+  ``terminate``终止主事件循环是一个不可逆的行为，因为当使用 ``twisted/authbahn`` 作为主循环的时候， ``twisted`` 反应器 (reacters) 终止后不能被重启。所以``terminate``操作应该保留到你程序的最后面再使用。
 
 重新连接
 ------------
